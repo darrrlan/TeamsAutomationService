@@ -1,0 +1,51 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual environments
+venv/
+.env
+.env.*         # outros .env (ex: .env.local)
+.venv/
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Distribution / build
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+
+# Python packaging
+.eggs/
+*.egg
+manifest.ini
+
+# Secrets/keys
+secrets.json
+*.pem
+*.key
+
+# Docker
+docker-compose.override.yml
+
+# Misc
+node_modules/
