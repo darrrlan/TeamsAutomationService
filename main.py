@@ -1,15 +1,16 @@
-from auth import get_access_token
-from config import db
+from teamsService import createTeam, addMemberTeam
 
 if __name__ == "__main__":
-    print("🔐 Solicitando token de acesso...")
-    token = get_access_token()
-    print("✅ Token gerado com sucesso!")
-    print(token[:200] + "...")
-    print("\n🗄️ Testando conexão com o MongoDB...")
-    try:
-        databases = db.client.list_database_names()
-        print("✅ Conexão bem-sucedida!")
-        print("📚 Bancos disponíveis:", databases)
-    except Exception as e:
-        print("❌ Erro ao conectar ao MongoDB:", e)
+    print("🚀 Starting the microservice...")
+
+    new_team = createTeam("Support Squad", "Internal technical support team")
+
+    if new_team:
+        team_id = new_team.get("id")
+        if team_id:
+            addMemberTeam(team_id, "analyst@company.com", role="owner")
+            addMemberTeam(team_id, "collaborator@company.com", role="member")
+        else:
+            print("❌ Team ID not found in response.")
+    else:
+        print("❌ Failed to create the team.")
