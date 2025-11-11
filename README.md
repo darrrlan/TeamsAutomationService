@@ -25,20 +25,26 @@ Setup:
 ------
 1. Clone the repository:
    git clone https://github.com/yourusername/teams-automation-service.git
+   
    cd teams-automation-service
 
-2. Create and activate a Python virtual environment:
+3. Create and activate a Python virtual environment:
    python -m venv venv
+   
    source venv/bin/activate   (On Windows: venv\Scripts\activate)
 
-3. Install dependencies:
+4. Install dependencies:
    pip install -r requirements.txt
 
-4. Create a `.env` file with your configuration variables:
+5. Create a `.env` file with your configuration variables:
    TENANT_ID=your-tenant-id
+   
    CLIENT_ID=your-client-id
+   
    CLIENT_SECRET=your-client-secret
+   
    MONGO_URI=your-mongodb-connection-string
+   
    GRAPH_API_URL=https://graph.microsoft.com/v1.0
 
 Usage:
@@ -54,7 +60,9 @@ Diagram:
 --------
 See the sequence diagram illustrating the microservice workflow:
 
-<img width="705" height="530" alt="VO_1JW8n48RlVOe9yR0SSEzxCAn2Y8b48lW0PNU0ncsxJgScQ7XtM-eIrrLldUcNVxv_wbWIUzq88Iks1CyEIRHXfohLIiCmMggARDY-gGeXqrAPw_Ou7e5qi5ptqVBT4q8vWwpqV4ZCUHV7trBjZc51iZr0kRgFU9h2y8EsPczdj-beUWiHLM5o4omAUF86z3THiLp7h" src="https://github.com/user-attachments/assets/a74acd85-6f80-4191-9343-173ff8909a4a" />
+<p align="center">
+  <img width="705" height="530" alt="Sequence Diagram" src="https://github.com/user-attachments/assets/a74acd85-6f80-4191-9343-173ff8909a4a" />
+</p>
 
 This diagram shows:
 - Request token from Azure AD
@@ -71,3 +79,4 @@ Troubleshooting:
 License:
 --------
 MIT License
+
