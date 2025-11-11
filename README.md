@@ -1,4 +1,4 @@
-#Teams Automation Microservice
+Teams Automation Microservice
 =============================
 
 This microservice automates Microsoft Teams management by creating Teams, adding users, and logging operations in MongoDB.
@@ -24,19 +24,23 @@ Prerequisites:
 Setup:
 ------
 1. Clone the repository:
+   
    git clone https://github.com/yourusername/teams-automation-service.git
    
    cd teams-automation-service
 
 3. Create and activate a Python virtual environment:
+   
    python -m venv venv
    
    source venv/bin/activate   (On Windows: venv\Scripts\activate)
 
-4. Install dependencies:
+5. Install dependencies:
+   
    pip install -r requirements.txt
 
-5. Create a `.env` file with your configuration variables:
+7. Create a `.env` file with your configuration variables:
+   
    TENANT_ID=your-tenant-id
    
    CLIENT_ID=your-client-id
@@ -50,6 +54,7 @@ Setup:
 Usage:
 ------
 Run the main script to create a team and add members:
+
    python main.py
 
 Logging:
@@ -79,4 +84,5 @@ Troubleshooting:
 License:
 --------
 MIT License
+
 
